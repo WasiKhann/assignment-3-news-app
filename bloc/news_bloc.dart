@@ -20,7 +20,6 @@ class NewsError extends NewsState {}
 
 class NewsBloc extends Bloc<NewsEvent, NewsState> {
   NewsBloc() : super(NewsLoading()) {
-    // Registering a handler for the FetchNewsEvent
     on<FetchNewsEvent>(_onFetchNews);
   }
 
