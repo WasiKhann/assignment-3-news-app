@@ -15,8 +15,8 @@ class NewsHome extends StatelessWidget {
               'assets/logo.png',
               height: 30,
             ),
-            SizedBox(width: 10),
-            Text('Headline News'),
+            const SizedBox(width: 10),
+            const Text('Headline News'),
           ],
         ),
         centerTitle: true,
@@ -50,7 +50,7 @@ class NewsHome extends StatelessWidget {
                   leading: article['urlToImage'] != null
                       ? Image.network(article['urlToImage'],
                           width: 50, fit: BoxFit.cover)
-                      : Icon(Icons.image),
+                      : const Icon(Icons.image),
                   title: Text(article['title'] ?? 'No Title'),
                   subtitle: Text(article['author'] ?? 'Unknown Author'),
                   onTap: () => showModalBottomSheet(
@@ -61,7 +61,7 @@ class NewsHome extends StatelessWidget {
               },
             );
           } else {
-            return Center(child: Text('Error fetching news.'));
+            return const Center(child: Text('Error fetching news.'));
           }
         },
       ),
